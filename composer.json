@@ -1,0 +1,45 @@
+{
+    "name": "makidizajnerica/laravel-configurator",
+    "description": "Laravel Configurator.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php", "laravel", "framework", "config", "configurator"],
+    "homepage": "https://github.com/MakiDizajnerica/laravel-configurator",
+    "authors": [
+        {
+            "name": "Nemanja Marijanovic",
+            "email": "n.marijanovic@hotmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "laravel/framework": ">=9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.9",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MakiDizajnerica\\Configurator\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MakiDizajnerica\\Configurator\\Tests": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MakiDizajnerica\\Configurator\\ConfiguratorServiceProvider"
+            ],
+            "aliases": {
+                "Configurator": "MakiDizajnerica\\Configurator\\Facades\\Configurator"
+            }
+        }
+    }
+}
